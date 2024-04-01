@@ -1,0 +1,55 @@
+@mixin display-full {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin display($flex: flex, $items: center, $column: 40px, $list: none) {
+  display: $flex;
+  align-items: $items;
+  column-gap: $column;
+  list-style: $list;
+}
+@mixin links-none($decoration: none, $color: $main-text-first-color) {
+  text-decoration: $decoration;
+  color: $color;
+}
+
+@mixin hover {
+  cursor: pointer;
+  color: $main-text-color;
+  font-weight: 500;
+  border-bottom: 1px solid $main-text-color;
+}
+@mixin lot-button(
+  $pinline: 62px,
+  $pblock: 13px,
+  $border: 2px solid $main-btn-color,
+  $radius: 50px,
+  $bgcolor: transparent,
+  $weight: 600,
+  $color: $main-btn-color,
+  $transitios: all 0.4s ease
+) {
+  padding-inline: $pinline;
+  padding-block: $pblock;
+  border: $border;
+  border-radius: $radius;
+  background-color: $bgcolor;
+  font-weight: $weight;
+  color: $color;
+  transition: $transitios;
+}
+@mixin btn-hover(
+  $cursor: pointer,
+  $bgcolor: $main-btn-color,
+  $color: $main-text-second-color
+) {
+  cursor: $cursor;
+  background-color: $bgcolor;
+  color: $color;
+  box-shadow: 0px 30px 40px -14px rgba(255, 0, 0, 0.48);
+}
+@mixin marginTopadding {
+  margin: 0;
+  padding: 0;
+}
